@@ -1,23 +1,29 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-// import Card from "./components/Card";
-// import Card from "./components/Card"; // Переконайтеся, що "Card" імпортується як "default"
-import Card from "./components/Card"; // Переконайтеся, що ім'я 'Card' відповідає експорту в 'Card.jsx'
+import ReactDOM from 'react-dom';
+import App from './componets/App';
 
-// import "./index.css";
+ReactDOM.render(<App />, document.querySelector('#root'));
+// ====================================================================
 
-// console.log(card);
-ReactDOM.createRoot(document.getElementById("root")).render(<Card />);
+// <Painting
+//     url={painting.url}
+//     title={painting.title}
+//     autorName={painting.author.url}
+//     autorNameUrl={painting.author.tag}
+//     price={painting.price}
+//   />
+// ===================================================================
+// import React from 'react';
+// import ReactDOM from 'react-dom/client';
+// import './index.css';
 
-// const p = <p id="test-id">I am P</p>;
-// console.log(p);
-
-// const div = (
-//   <div id="test-id" name="main" className="test-class">
-//     Hello world, {p}
-//   </div>
+// const root = ReactDOM.createRoot(document.getElementById('root'));
+// root.render(
+//   <React.StrictMode>
+//     <App />
+//   </React.StrictMode>
 // );
 
-// console.log(div);
-
-// ReactDOM.createRoot(document.getElementById("root")).render(card);
+// // If you want to start measuring performance in your app, pass a function
+// // to log results (for example: reportWebVitals(console.log))
+// // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+// reportWebVitals();
