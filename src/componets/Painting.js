@@ -1,4 +1,4 @@
-const Painting = ({ url, title, autorNameUrl, autorName, price }) => {
+const Painting = ({ url, title, autorNameUrl, autorName, price, quantity }) => {
   return (
     <div>
       <img src={url} alt={title} width="480" />
@@ -7,7 +7,7 @@ const Painting = ({ url, title, autorNameUrl, autorName, price }) => {
         Author: <a href={autorNameUrl}>{autorName}</a>
       </p>
       <p>Price: {price} credit</p>
-      <p>availability: закінчується або є в наявності </p>
+      <p>quantity: {quantity < 10 ? 'закінчується' : 'є внаявності'} </p>
       <button type="butoon">add to cart</button>
     </div>
   );

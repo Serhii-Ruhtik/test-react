@@ -1,31 +1,25 @@
-import Painting from './Painting';
+import PaintingList from './PaintingList';
 import paintings from '../paintings';
+import Section from './Section';
 export default function App() {
   return (
     <div>
-      <Painting
-        url={paintings[0].url}
-        title={paintings[0].title}
-        autorName={paintings[0].author.url}
-        autorNameUrl={paintings[0].author.tag}
-        price={paintings[0].price}
-      />
-
-      <Painting
-        url={paintings[1].url}
-        title={paintings[1].title}
-        autorName={paintings[1].author.url}
-        autorNameUrl={paintings[1].author.tag}
-        price={paintings[1].price}
-      />
-
-      <Painting
-        url={paintings[2].url}
-        title={paintings[2].title}
-        autorName={paintings[2].author.url}
-        autorNameUrl={paintings[2].author.tag}
-        price={paintings[2].price}
-      />
+      <Section title="TOP Week">
+        <PaintingList items={paintings} />
+      </Section>
+      <Section />
     </div>
   );
 }
+
+// {paintings.map(painting => (
+//   <Painting
+//     key={painting.id}
+//     url={painting.url}
+//     title={painting.title}
+//     autorNameUrl={painting.author.url}
+//     autorName={painting.author.tag}
+//     price={painting.price}
+//     quantity={painting.quantity}
+//   />
+// ))}
